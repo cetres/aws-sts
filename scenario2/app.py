@@ -19,8 +19,8 @@ def get_bedrock_response(prompt: str, model_id: str = "amazon.titan-text-express
             profile_arn="arn:aws:rolesanywhere:sa-east-1:101067722371:profile/c1b25145-d81a-4034-a27d-bdd293f836e0",
             role_arn="arn:aws:iam::101067722371:role/a1.sts_bedrock_test_role",
             trust_anchor_arn="arn:aws:rolesanywhere:sa-east-1:101067722371:trust-anchor/c32fb318-8eae-4099-857b-37517cf5904e",
-            certificate='../data/certificate.pem',
-            private_key='../data/privkey.pem',
+            certificate='./data/certificate.pem',
+            private_key='./data/privkey.pem',
             region="sa-east-1"
         ).get_session()
         bedrock = roles_anywhere_session.client(
